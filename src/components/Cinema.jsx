@@ -52,6 +52,7 @@ export default function Cinema({ activeModelId }) {
             ) : filmVideo ? (
               <video
                 className="cinema-video"
+                src={filmVideo.url}
                 poster={model.hero.poster}
                 controls
                 playsInline
@@ -66,9 +67,7 @@ export default function Cinema({ activeModelId }) {
                   backgroundColor: '#000',
                   display: 'block'
                 }}
-              >
-                <source src={filmVideo.url} type="video/mp4" />
-              </video>
+              />
             ) : null}
             <figcaption className="cinema-caption" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
               <div style={{ flex: '1', minWidth: '250px' }}>
