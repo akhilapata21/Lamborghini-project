@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "lib": ["ES2020", "DOM"],
+    "module": "ES2020",
+    "noEmit": true,
+    "target": "ES2020"
+  },
+  "include": ["script.js"]
+}

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini — Models</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Intro Ignition Loader -->
+    <div class="intro-loader" id="intro-loader">
+      <div class="loader-panel loader-panel-left"></div>
+      <div class="loader-panel loader-panel-right"></div>
+      
+      <div class="loader-content">
+        <div class="loader-header">
+          <span class="loader-logo-mark" aria-hidden="true">◢</span>
+          <span class="loader-logo-wordmark">Lamborghini</span>
+        </div>
+        
+        <div class="loader-dashboard">
+          <div class="dashboard-status">
+            <span class="status-indicator"></span>
+            <span class="status-text" id="loader-status-text">SYSTEMS OFFLINE</span>
+          </div>
+          
+          <div class="gauge-and-btn">
+            <!-- Circular RPM Tachometer -->
+            <div class="rpm-gauge-container">
+              <svg class="rpm-gauge" viewBox="0 0 200 200">
+                <circle class="rpm-gauge-bg" cx="100" cy="100" r="85"></circle>
+                <circle class="rpm-gauge-fill" id="rpm-gauge-fill" cx="100" cy="100" r="85" stroke-dasharray="534" stroke-dashoffset="534"></circle>
+              </svg>
+              <div class="rpm-display">
+                <span class="rpm-value" id="rpm-val">0</span>
+                <span class="rpm-unit">RPM x1000</span>
+              </div>
+            </div>
+            
+            <!-- Red Start Engine Button -->
+            <div class="ignition-btn-wrap" id="ignition-btn-wrap">
+              <div class="ignition-btn-pulse"></div>
+              <button class="ignition-btn" id="ignition-btn" type="button">
+                <span class="ignition-label-top">START</span>
+                <span class="ignition-label-mid">ENGINE</span>
+                <span class="ignition-label-bot">START</span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Diagnostics Logs -->
+          <div class="cyber-logs" id="cyber-logs">
+            <div class="log-line">> STANDBY: SECURE IGNITION TRIGGER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <a class="logo" href="#">
+        <span class="logo-mark" aria-hidden="true">◢</span>
+        <span class="logo-text">
+          <span class="logo-wordmark logo-wordmark--solo">Lamborghini</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#models">Models</a>
+        <a href="#cinema">Film</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#specs">Specs</a>
+        <a href="#testimonials">Owners</a>
+        <a href="#cta" class="nav-cta">Dealer</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-bg">
+          <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+          <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+          <iframe
+            id="hero-bg-img"
+            class="hero-img"
+            src="https://www.youtube.com/embed/sitXeGjm4Mc?autoplay=1&mute=1&loop=1&playlist=sitXeGjm4Mc&controls=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1"
+            style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 100vh; transform: translate(-50%, -50%) scale(1.5); pointer-events: none; border: none; object-fit: cover;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div class="hero-gradient"></div>
+          <div class="hero-grid"></div>
+        </div>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow" id="hero-eyebrow" data-reveal>Revuelto — HPEV</p>
+            <div class="hero-title-wrap" data-reveal>
+            <h1 class="hero-title hero-title-3d">
+              <span class="title-line">We are not</span>
+              <span class="title-line title-accent">like the others</span>
+            </h1>
+          </div>
+          <p class="hero-lead" id="hero-lead" data-reveal>
+            First HPEV flagship: carbon monocoque, three electric motors, and a naturally
+            aspirated V12 that still owns the soundtrack.
+          </p>
+          <div class="hero-stats" id="hero-stats" data-reveal>
+            <div class="stat">
+              <span class="stat-value" id="hero-stat1-val">2.5s</span>
+              <span class="stat-label" id="hero-stat1-lbl">0 — 100 km/h</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="hero-stat2-val">350+</span>
+              <span class="stat-label" id="hero-stat2-lbl">km/h (est.)</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="hero-stat3-val">1015</span>
+              <span class="stat-label" id="hero-stat3-lbl">CV combined</span>
+            </div>
+          </div>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-primary" href="#models">Browse models</a>
+            <a class="btn btn-ghost" href="#cinema">Watch the film</a>
+          </div>
+          </div>
+          <div class="hero-showcase" data-reveal>
+            <iframe
+              class="hero-video"
+              src="https://youtu.be/1E4CDn4B7wo?si=T0-XXKxEV3wYFrts/embed/sitXeGjm4Mc?autoplay=1&mute=1&loop=1&playlist=sitXeGjm4Mc&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+              style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); pointer-events: none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="scroll-line"></span>
+        </div>
+      </section>
+
+      <div class="marquee-strip" role="presentation" aria-hidden="true">
+        <div class="marquee-inner">
+          <span>Revuelto</span>
+          <span>◆</span>
+          <span>Huracán</span>
+          <span>◆</span>
+          <span>Urus</span>
+          <span>◆</span>
+          <span>Ad Personam</span>
+          <span>◆</span>
+          <span>Sant’Agata</span>
+          <span>◆</span>
+          <span>Revuelto</span>
+          <span>◆</span>
+          <span>Huracán</span>
+          <span>◆</span>
+          <span>Urus</span>
+          <span>◆</span>
+          <span>Ad Personam</span>
+          <span>◆</span>
+          <span>Sant’Agata</span>
+          <span>◆</span>
+        </div>
+      </div>
+
+      <section class="models" id="models" aria-labelledby="models-heading">
+        <div class="section-head">
+          <h2 id="models-heading">The lineup</h2>
+          <p>
+            Tap a model to open its sheet and mirror the hero above — fan overview for layout only,
+            not factory specifications.
+          </p>
+        </div>
+        <div class="models-shell" data-reveal>
+          <div class="model-tabs" role="tablist" aria-label="Lamborghini models">
+            <button
+              type="button"
+              class="model-tab is-active"
+              role="tab"
+              id="tab-revuelto"
+              aria-selected="true"
+              aria-controls="panel-revuelto"
+              tabindex="0"
+              data-model="revuelto">
+              Revuelto
+            </button>
+            <button
+              type="button"
+              class="model-tab"
+              role="tab"
+              id="tab-huracan-tecnica"
+              aria-selected="false"
+              aria-controls="panel-huracan-tecnica"
+              tabindex="-1"
+              data-model="huracan-tecnica">
+              Huracán Tecnica
+            </button>
+            <button
+              type="button"
+              class="model-tab"
+              role="tab"
+              id="tab-huracan-sto"
+              aria-selected="false"
+              aria-controls="panel-huracan-sto"
+              tabindex="-1"
+              data-model="huracan-sto">
+              Huracán STO
+            </button>
+            <button
+              type="button"
+              class="model-tab"
+              role="tab"
+              id="tab-urus"
+              aria-selected="false"
+              aria-controls="panel-urus"
+              tabindex="-1"
+              data-model="urus">
+              Urus S
+            </button>
+            <button
+              type="button"
+              class="model-tab"
+              role="tab"
+              id="tab-countach"
+              aria-selected="false"
+              aria-controls="panel-countach"
+              tabindex="-1"
+              data-model="countach">
+              Countach LPI 800-4
+            </button>
+          </div>
+          <div class="model-panels">
+            <div
+              class="model-panel is-active"
+              id="panel-revuelto"
+              role="tabpanel"
+              aria-labelledby="tab-revuelto">
+              <div class="model-panel-inner js-tilt" data-tilt-max="4">
+                <div class="model-panel-visual">
+                  <img
+                    data-model-panel-img
+                    data-model="revuelto"
+                    src="https://images.unsplash.com/photo-1713856626665-27a371c1f4ad?auto=format&fit=crop&w=1200&h=800&q=80"
+                    alt="Lamborghini Revuelto supercar"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="model-panel-copy">
+                  <p class="model-tag">Flagship HPEV</p>
+                  <h3>Revuelto</h3>
+                  <p class="model-desc">
+                    Twelve cylinders forward, electrons at the corners — a new chapter for the Raging
+                    Bull without muting its voice.
+                  </p>
+                  <ul class="model-highlights">
+                    <li>Monofuselage carbon structure</li>
+                    <li>Triple electric motor layout</li>
+                    <li>8-speed dual-clutch transaxle</li>
+                  </ul>
+                  <div class="model-panel-price">
+                    <span class="price-inr">₹8.89 Crore</span>
+                    <span class="price-usd">~$608,358 USD</span>
+                  </div>
+                  <button class="btn btn-ghost more-info-btn" data-model="revuelto" type="button" style="margin-top: 0.75rem; width: 100%;">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="model-panel"
+              id="panel-huracan-tecnica"
+              role="tabpanel"
+              aria-labelledby="tab-huracan-tecnica"
+              hidden>
+              <div class="model-panel-inner js-tilt" data-tilt-max="4">
+                <div class="model-panel-visual">
+                  <img
+                    data-model-panel-img
+                    data-model="huracan-tecnica"
+                    src="https://images.unsplash.com/photo-1725201708365-1d4db2fcc6a7?auto=format&fit=crop&w=1200&h=800&q=80"
+                    alt="Lamborghini Huracán Tecnica supercar"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="model-panel-copy">
+                  <p class="model-tag">RWD V10</p>
+                  <h3>Huracán Tecnica</h3>
+                  <p class="model-desc">
+                    The sweet spot between EVO daily polish and STO track aggression — tail happy,
+                    front precise.
+                  </p>
+                  <ul class="model-highlights">
+                    <li>LDVI vehicle dynamics</li>
+                    <li>Carbon-ceramic brakes optional</li>
+                    <li>Strada, Sport, Corsa modes</li>
+                  </ul>
+                  <div class="model-panel-price">
+                    <span class="price-inr">₹4.04 Crore</span>
+                    <span class="price-usd">~$239,000 USD</span>
+                  </div>
+                  <button class="btn btn-ghost more-info-btn" data-model="huracan-tecnica" type="button" style="margin-top: 0.75rem; width: 100%;">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="model-panel"
+              id="panel-huracan-sto"
+              role="tabpanel"
+              aria-labelledby="tab-huracan-sto"
+              hidden>
+              <div class="model-panel-inner js-tilt" data-tilt-max="4">
+                <div class="model-panel-visual">
+                  <img
+                    data-model-panel-img
+                    data-model="huracan-sto"
+                    src="https://images.unsplash.com/photo-1725201763131-729ab5c1c875?auto=format&fit=crop&w=1200&h=800&q=80"
+                    alt="Lamborghini Huracán STO rear"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="model-panel-copy">
+                  <p class="model-tag">Track homologation</p>
+                  <h3>Huracán STO</h3>
+                  <p class="model-desc">
+                    Shark fin, adjustable wing, and a rear axle that wants to talk through every fast
+                    corner.
+                  </p>
+                  <ul class="model-highlights">
+                    <li>75% carbon fiber body panels</li>
+                    <li>Brembo CCM-R brakes</li>
+                    <li>Race-derived Bridgestone Potenza</li>
+                  </ul>
+                  <div class="model-panel-price">
+                    <span class="price-inr">₹4.99 Crore</span>
+                    <span class="price-usd">~$335,000 USD</span>
+                  </div>
+                  <button class="btn btn-ghost more-info-btn" data-model="huracan-sto" type="button" style="margin-top: 0.75rem; width: 100%;">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="model-panel"
+              id="panel-urus"
+              role="tabpanel"
+              aria-labelledby="tab-urus"
+              hidden>
+              <div class="model-panel-inner js-tilt" data-tilt-max="4">
+                <div class="model-panel-visual">
+                  <img
+                    data-model-panel-img
+                    data-model="urus"
+                    src="https://images.unsplash.com/photo-1627454820516-dc767bcb4d3e?auto=format&fit=crop&w=1200&h=800&q=80"
+                    alt="Lamborghini Urus S front"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="model-panel-copy">
+                  <p class="model-tag">Super SUV</p>
+                  <h3>Urus S</h3>
+                  <p class="model-desc">
+                    Family logistics meet volcanic acceleration — air suspension, torque vectoring,
+                    and a cabin that still feels special.
+                  </p>
+                  <ul class="model-highlights">
+                    <li>ANIMA drive modes including Sabbia</li>
+                    <li>Adaptive rear steering</li>
+                    <li>Carbon ceramic brakes available</li>
+                  </ul>
+                  <div class="model-panel-price">
+                    <span class="price-inr">₹4.18 Crore</span>
+                    <span class="price-usd">~$230,000 USD</span>
+                  </div>
+                  <button class="btn btn-ghost more-info-btn" data-model="urus" type="button" style="margin-top: 0.75rem; width: 100%;">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="model-panel"
+              id="panel-countach"
+              role="tabpanel"
+              aria-labelledby="tab-countach"
+              hidden>
+              <div class="model-panel-inner js-tilt" data-tilt-max="4">
+                <div class="model-panel-visual">
+                  <img
+                    data-model-panel-img
+                    data-model="countach"
+                    src="https://images.unsplash.com/photo-1710476308736-231a47dfd6bd?auto=format&fit=crop&w=1200&h=800&q=80"
+                    alt="Lamborghini Countach LPI 800-4"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="model-panel-copy">
+                  <p class="model-tag">Hybrid icon</p>
+                  <h3>Countach LPI 800-4</h3>
+                  <p class="model-desc">
+                    Retro-futurist sheet metal with a V12 and 48-volt electric motor — a collector
+                    halo, not a mass-market trim.
+                  </p>
+                  <ul class="model-highlights">
+                    <li>Periscopio-style roof channel nod</li>
+                    <li>Monocoque in carbon fiber</li>
+                    <li>Extremely limited production run</li>
+                  </ul>
+                  <div class="model-panel-price">
+                    <span class="price-inr">₹21.00 Crore</span>
+                    <span class="price-usd">~$2,640,000 USD</span>
+                  </div>
+                  <button class="btn btn-ghost more-info-btn" data-model="countach" type="button" style="margin-top: 0.75rem; width: 100%;">More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cinema" id="cinema">
+        <div class="section-head">
+          <h2>The roar, uncut</h2>
+          <p>Cinematic light, asphalt, and motion — turn sound on when you are ready.</p>
+        </div>
+        <div class="cinema-grid">
+          <figure class="cinema-stage" data-reveal>
+            <div class="cinema-tilt js-tilt" data-tilt-max="5">
+              <video
+                class="cinema-video"
+                id="cinema-video-el"
+                src="../video2.mp4"
+                controls
+                playsinline
+                style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); background-color: #000; display: block;"
+              ></video>
+              <figcaption class="cinema-caption" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="flex: 1; min-width: 250px;">
+                  <span class="cinema-tag">Film</span>
+                  <span>Lamborghini Revuelto goes head-to-head demonstrating raw power.</span>
+                </div>
+                <div>
+                  <button class="btn btn-ghost" id="film-unmute-btn" type="button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; height: auto; border: 1px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;">Unmute Sound 🔊</button>
+                </div>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="section-head">
+          <h2>Sculpture in motion</h2>
+          <p>Every surface is a vector — hover panels for a three-dimensional read of the form.</p>
+        </div>
+        <div class="gallery-scene">
+          <div class="gallery-item" data-reveal>
+            <div class="gallery-cell js-tilt" data-tilt-max="10">
+              <img
+                src="assets/img/lamborghini_wheel_detail.png"
+                alt="Lamborghini supercar wheel and brake detail"
+                width="1200"
+                height="1000"
+                loading="lazy"
+                decoding="async">
+              <span class="gallery-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="gallery-item" data-reveal>
+            <div class="gallery-cell gallery-cell-tall js-tilt" data-tilt-max="12">
+              <img
+                src="assets/img/lamborghini_front_fascia.png"
+                alt="Lamborghini front fascia in dramatic light"
+                width="1200"
+                height="1000"
+                loading="lazy"
+                decoding="async">
+              <span class="gallery-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="gallery-item" data-reveal>
+            <div class="gallery-cell js-tilt" data-tilt-max="10">
+              <img
+                src="assets/img/lamborghini_side_profile.png"
+                alt="Lamborghini side profile on track"
+                width="1200"
+                height="1000"
+                loading="lazy"
+                decoding="async">
+              <span class="gallery-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="gallery-item gallery-item-wide" data-reveal>
+            <div class="gallery-cell gallery-cell-wide js-tilt" data-tilt-max="8">
+              <img
+                src="assets/img/lamborghini_luxury_interior.png"
+                alt="Lamborghini luxury interior and steering wheel"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async">
+              <span class="gallery-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="gallery-item" data-reveal>
+            <div class="gallery-cell js-tilt" data-tilt-max="11">
+              <img
+                src="assets/img/lamborghini_rear_wing.png"
+                alt="Lamborghini rear wing and taillights"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async">
+              <span class="gallery-shine" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="specs" id="specs">
+        <div class="section-head">
+          <h2>Engineered obsession</h2>
+          <p>Carbon, software, and naturally aspirated instinct — one integrated machine.</p>
+        </div>
+        <div class="specs-grid">
+          <article class="spec-card" data-reveal>
+            <div class="spec-card-tilt js-tilt" data-tilt-max="5">
+              <h3>Monocoque</h3>
+              <p>Multi-material structure — lightness that you feel before you see it.</p>
+            </div>
+          </article>
+          <article class="spec-card spec-card-wide" data-reveal>
+            <div class="spec-card-tilt js-tilt" data-tilt-max="4">
+              <h3>HPEV architecture</h3>
+              <p>
+                Electric torque on the front axle, V12 dominance at the rear — orchestrated by
+                Lamborghini Dinamica Veicolo Integrata.
+              </p>
+            </div>
+          </article>
+          <article class="spec-card" data-reveal>
+            <div class="spec-card-tilt js-tilt" data-tilt-max="5">
+              <h3>Sound</h3>
+              <p>The twelve-cylinder voice — shaped, never diluted, for the road and the circuit.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="section-head section-head-light">
+          <h2>From the community</h2>
+          <p>Passion projects and fan voices — not official Lamborghini statements.</p>
+        </div>
+        <div class="testimonial-track">
+          <article class="testimonial-card" data-reveal>
+            <div class="testimonial-tilt js-tilt" data-tilt-max="6">
+              <blockquote>
+                <p>
+                  “It does not feel like a hybrid. It feels like the future finally learned how to
+                  scream.”
+                </p>
+                <footer class="testimonial-byline">
+                  <div class="avatar" data-hue="42" aria-hidden="true"></div>
+                  <div>
+                    <cite>M. Voss</cite>
+                    <span>GT3 privateer · Berlin</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </article>
+          <article class="testimonial-card" data-reveal>
+            <div class="testimonial-tilt js-tilt" data-tilt-max="6">
+              <blockquote>
+                <p>
+                  “The front axle pulls you into corners I used to respect. The rear reminds you who’s
+                  boss on exit.”
+                </p>
+                <footer class="testimonial-byline">
+                  <div class="avatar" data-hue="200" aria-hidden="true"></div>
+                  <div>
+                    <cite>Elena Ruiz</cite>
+                    <span>Track instructor · Montmeló</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </article>
+          <article class="testimonial-card" data-reveal>
+            <div class="testimonial-tilt js-tilt" data-tilt-max="6">
+              <blockquote>
+                <p>
+                  “I have owned three generations. This is the first that made my passenger cry — in a
+                  good way.”
+                </p>
+                <footer class="testimonial-byline">
+                  <div class="avatar" data-hue="280" aria-hidden="true"></div>
+                  <div>
+                    <cite>James Okonkwo</cite>
+                    <span>Collector · Lagos</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta" id="cta">
+        <div class="cta-inner js-tilt" data-tilt-max="3">
+          <div class="cta-visual" data-reveal>
+            <div class="cta-frame">
+              <img
+                src="assets/img/lamborghini_cta_detail.png"
+                alt="Lamborghini supercar detail — wheel and body line"
+                width="1400"
+                height="933"
+                loading="lazy"
+                decoding="async">
+            </div>
+          </div>
+          <div class="cta-copy" data-reveal>
+            <p class="eyebrow eyebrow-dark">Find your dealer</p>
+            <h2>Book a Test Drive</h2>
+            <p>
+              This page is a creative fan tribute. Enter your contact details below to request an official dealer-verified test drive scheduling block.
+            </p>
+            <form class="cta-form" action="#" method="post" id="cta-form">
+              <label class="sr-only" for="cta-name">Name</label>
+              <input
+                id="cta-name"
+                name="name"
+                type="text"
+                placeholder="Full Name"
+                required>
+              <label class="sr-only" for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@domain.com"
+                required>
+              <button class="btn btn-primary btn-full" type="submit">Book Test Drive</button>
+            </form>
+            <p class="cta-feedback" id="cta-feedback" hidden>Booking request received — a dealer representative will contact you shortly.</p>
+            <p class="cta-note">Demo form only — no data is sent to a server.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark" aria-hidden="true">◢</span>
+          <span class="footer-wordmark">Lamborghini</span>
+        </div>
+        <div class="footer-columns">
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#cinema">Film</a></li>
+              <li><a href="#models">Models</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#specs">Engineering</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul class="footer-social">
+              <li><a href="#" aria-label="Instagram">IG</a></li>
+              <li><a href="#" aria-label="YouTube">YT</a></li>
+              <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © <span id="year"></span> Fan tribute site. Lamborghini and related marks belong to their
+          respective owners. Photos &amp; video bundled in /assets (online fallbacks optional).
+        </p>
+        <p class="footer-credit">Not affiliated with Automobili Lamborghini S.p.A.</p>
+      </div>
+    </footer>
+
+    <!-- More Info Modal Overlay -->
+    <div class="info-modal" id="info-modal" aria-hidden="true" role="dialog">
+      <div class="info-modal-overlay" id="info-modal-overlay"></div>
+      <div class="info-modal-container">
+        <button class="info-modal-close" id="info-modal-close" aria-label="Close modal">✕</button>
+        
+        <div class="info-modal-body">
+          <div class="info-modal-visual">
+            <div class="modal-gallery-container" id="modal-gallery-container">
+              <img id="modal-img" src="" alt="Lamborghini model visual" draggable="false">
+            </div>
+            <div class="modal-thumbnails" id="modal-thumbnails">
+              <!-- Dynamically populated thumbnails list -->
+            </div>
+            <div class="modal-visual-gradient"></div>
+          </div>
+          
+          <div class="info-modal-content">
+            <!-- Specifications View -->
+            <div id="modal-specs-view">
+              <p class="modal-tag" id="modal-tag">Supercar</p>
+              <h2 class="modal-title" id="modal-title">Model Name</h2>
+              
+              <div class="modal-price-wrap">
+                <span class="price-label">MSRP (Ex-Showroom)</span>
+                <div class="price-row">
+                  <span class="modal-price-inr" id="modal-price-inr">₹0.00 Crore</span>
+                  <span class="modal-price-usd" id="modal-price-usd">~$000,000 USD</span>
+                </div>
+              </div>
+              
+              <div class="modal-divider"></div>
+              
+              <p class="modal-story" id="modal-story">Long descriptive story goes here...</p>
+              
+              <div class="modal-specs-grid">
+                <div class="modal-spec-item">
+                  <span class="spec-lbl">Engine</span>
+                  <span class="spec-val" id="modal-spec-engine">Engine info</span>
+                </div>
+                <div class="modal-spec-item">
+                  <span class="spec-lbl">Transmission</span>
+                  <span class="spec-val" id="modal-spec-trans">Trans info</span>
+                </div>
+                <div class="modal-spec-item">
+                  <span class="spec-lbl">Chassis</span>
+                  <span class="spec-val" id="modal-spec-chassis">Chassis info</span>
+                </div>
+                <div class="modal-spec-item">
+                  <span class="spec-lbl">Top Speed</span>
+                  <span class="spec-val" id="modal-spec-speed">000 km/h</span>
+                </div>
+              </div>
+              
+              <button class="btn btn-primary modal-cta-btn" id="modal-cta" type="button">Book a Test Drive</button>
+            </div>
+
+            <!-- Booking Form View -->
+            <div id="modal-booking-view" style="display: none;">
+              <p class="modal-tag">Verification Portal</p>
+              <h2 class="modal-title">Book Test Drive</h2>
+              <p class="modal-story">Please provide your verification details below to secure a scheduling block.</p>
+              
+              <form class="cta-form" id="modal-booking-form" action="#" method="post">
+                <div style="display: flex; flex-direction: column; gap: 0.35rem; text-align: left; margin-bottom: 0.75rem;">
+                  <label for="booking-name" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Full Name</label>
+                  <input type="text" id="booking-name" placeholder="Enter Full Name" required style="width: 100%; padding: 0.85rem; font-family: var(--font-body); background: var(--bg-deep); border: 1px solid var(--line); color: var(--text); outline: none;">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.35rem; text-align: left; margin-bottom: 1.25rem;">
+                  <label for="booking-email" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Email Address</label>
+                  <input type="email" id="booking-email" placeholder="you@domain.com" required style="width: 100%; padding: 0.85rem; font-family: var(--font-body); background: var(--bg-deep); border: 1px solid var(--line); color: var(--text); outline: none;">
+                </div>
+                <button class="btn btn-primary btn-full" type="submit">Verify & Confirm Booking</button>
+                <button class="btn btn-ghost btn-full" type="button" id="modal-booking-back" style="margin-top: 0.5rem;">Back to Specs</button>
+              </form>
+            </div>
+
+            <!-- Booking Success View -->
+            <div id="modal-success-view" style="display: none; text-align: center;">
+              <p class="modal-tag" style="color: #00e676;">Verified Pass</p>
+              <h2 class="modal-title" style="font-size: 2.2rem; color: #fff;">Ticket Issued</h2>
+              <div class="modal-divider" style="background: #00e676; opacity: 0.4;"></div>
+              
+              <!-- Digital Pass -->
+              <div class="digital-pass-card" style="border: 1px solid #00e676; background: rgba(0, 230, 118, 0.05); padding: 1.5rem; margin: 1.5rem 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%); text-align: left;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                  <span style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: 0.15em; color: #00e676;">Lambo Test Pass</span>
+                  <span id="ticket-id" style="font-family: monospace; font-size: 0.7rem; color: var(--text-muted);">ID: LMB-REV-2394</span>
+                </div>
+                
+                <div style="margin-bottom: 0.75rem;">
+                  <span style="display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Driver Name</span>
+                  <span id="ticket-name" style="font-size: 1.1rem; font-weight: 600; color: #fff;">Adrian Sutil</span>
+                </div>
+                
+                <div style="margin-bottom: 0.75rem;">
+                  <span style="display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Verification Email</span>
+                  <span id="ticket-email" style="font-size: 0.9rem; color: var(--text-muted);">adrian@lambo.in</span>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                  <span style="display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Vehicle Model</span>
+                  <span id="ticket-car" style="font-size: 1.1rem; font-weight: 600; color: var(--accent);">Revuelto Supercar</span>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.25rem; align-items: center; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 1rem;">
+                  <div class="cyber-barcode" style="width: 100%; height: 28px; background: linear-gradient(90deg, #fff 2px, transparent 2px, transparent 5px, #fff 5px, #fff 9px, transparent 9px, transparent 11px, #fff 11px, #fff 12px, transparent 12px, transparent 16px, #fff 16px, #fff 20px, transparent 20px, transparent 22px, #fff 22px, #fff 26px, transparent 26px) repeat-x; background-size: 60px 28px; opacity: 0.85;"></div>
+                  <span style="font-size: 0.6rem; letter-spacing: 0.3em; color: #00e676; margin-top: 0.25rem; text-transform: uppercase;">✦ SECURITY SECURE PASS ✦</span>
+                </div>
+              </div>
+
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">A representative from your nearest dealership will contact you to coordinate scheduling.</p>
+              <button class="btn btn-ghost btn-full" type="button" id="modal-success-close">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/models.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
