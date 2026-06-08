@@ -326,7 +326,7 @@ export default function AdminDashboard() {
                 </label>
                 <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', lineHeight: '1.45', background: 'rgba(0,0,0,0.2)', padding: '1rem', border: '1px solid var(--line)' }}>
                   • <strong>YouTube links:</strong> Paste any share/watch link (e.g. <code>https://youtu.be/Nun9uJGPeHI</code>) or just the 11-char ID.<br/>
-                  • <strong>Local drives:</strong> Paste a relative path (e.g. <code>/video.mp4</code>) or an absolute local directory file link.<br/>
+                  • <strong>Local drives:</strong> Paste a relative path (e.g. <code>/video/video.mp4</code> or <code>/video/video2.mp4</code>) or an absolute local directory file link.<br/>
                   • <strong>Default fallback:</strong> Leave fields blank to let the website load standard model trailers dynamically!
                 </div>
               </div>
@@ -340,7 +340,7 @@ export default function AdminDashboard() {
                 </label>
                 <input 
                   type="text" 
-                  placeholder="Default: Model Dynamic Trailer (or /video.mp4)" 
+                  placeholder="Default: Model Dynamic Trailer (or /video/video.mp4)" 
                   value={customBgInput}
                   onChange={(e) => setCustomBgInput(e.target.value)}
                   style={{ width: '100%', padding: '0.85rem', fontFamily: 'monospace', fontSize: '0.85rem', background: 'var(--bg-deep)', border: '1px solid var(--line)', color: 'var(--text)', outline: 'none' }}
@@ -353,7 +353,7 @@ export default function AdminDashboard() {
                 </label>
                 <input 
                   type="text" 
-                  placeholder="Default: Model Dynamic Trailer (or /video.mp4)" 
+                  placeholder="Default: Model Dynamic Trailer (or /video/video.mp4)" 
                   value={customShowcaseInput}
                   onChange={(e) => setCustomShowcaseInput(e.target.value)}
                   style={{ width: '100%', padding: '0.85rem', fontFamily: 'monospace', fontSize: '0.85rem', background: 'var(--bg-deep)', border: '1px solid var(--line)', color: 'var(--text)', outline: 'none' }}
@@ -366,7 +366,7 @@ export default function AdminDashboard() {
                 </label>
                 <input 
                   type="text" 
-                  placeholder="Default: Model Dynamic Film (or /video.mp4)" 
+                  placeholder="Default: Model Dynamic Film (or /video/video2.mp4)" 
                   value={customFilmInput}
                   onChange={(e) => setCustomFilmInput(e.target.value)}
                   style={{ width: '100%', padding: '0.85rem', fontFamily: 'monospace', fontSize: '0.85rem', background: 'var(--bg-deep)', border: '1px solid var(--line)', color: 'var(--text)', outline: 'none' }}

@@ -28,8 +28,8 @@ export default function Hero({ activeModelId }) {
   }, []);
 
   // Determine video sources dynamically based on settings
-  const bgSourceUrl = customBg || (videoMode === 'local' ? '/video.mp4' : model.videoBg);
-  const showcaseSourceUrl = customShowcase || (videoMode === 'local' ? '/video.mp4' : model.videoShowcase);
+  const bgSourceUrl = customBg || (videoMode === 'local' ? '/video/video.mp4' : model.videoBg);
+  const showcaseSourceUrl = customShowcase || (videoMode === 'local' ? '/video/video.mp4' : model.videoShowcase);
 
   const bgVideo = parseVideoUrl(bgSourceUrl);
   const showcaseVideo = parseVideoUrl(showcaseSourceUrl);

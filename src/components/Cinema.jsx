@@ -21,7 +21,7 @@ export default function Cinema({ activeModelId }) {
   }, []);
 
   // Determine film source dynamically
-  const filmSourceUrl = customFilm || '/video2.mp4';
+  const filmSourceUrl = customFilm || '/video/video2.mp4';
   const filmVideo = parseVideoUrl(filmSourceUrl);
 
   return (
