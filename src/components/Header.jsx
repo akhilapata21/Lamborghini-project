@@ -41,12 +41,12 @@ export default function Header({ currentView, onNavigate }) {
       </a>
       
       <nav className="nav" aria-label="Primary">
-        <a href="#models" onClick={(e) => handleLinkClick(e, 'home', 'models')}>Models</a>
-        <a href="#cinema" onClick={(e) => handleLinkClick(e, 'home', 'cinema')}>Film</a>
-        <a href="#gallery" onClick={(e) => handleLinkClick(e, 'home', 'gallery')}>Gallery</a>
-        <a href="#specs" onClick={(e) => handleLinkClick(e, 'home', 'specs')}>Specs</a>
-        <a href="#testimonials" onClick={(e) => handleLinkClick(e, 'home', 'testimonials')}>Owners</a>
-        <a href="#cta" onClick={(e) => handleLinkClick(e, 'home', 'cta')}>Book Test Drive</a>
+        <a href="#models" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'models')}>Models</a>
+        <a href="#cinema" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'cinema')}>Film</a>
+        <a href="#gallery" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'gallery')}>Gallery</a>
+        <a href="#specs" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'specs')}>Specs</a>
+        <a href="#testimonials" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'testimonials')}>Owners</a>
+        <a href="#cta" className="nav-cta" onClick={(e) => handleLinkClick(e, 'home', 'cta')}>Book Test Drive</a>
         
         {currentView === 'admin' ? (
           <a 

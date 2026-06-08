@@ -118,7 +118,6 @@ export default function Hero({ activeModelId }) {
             ref={bgRef}
             id="hero-bg-img"
             className="hero-img"
-            src={bgVideo.url}
             autoPlay
             loop
             muted={true}
@@ -137,7 +136,9 @@ export default function Hero({ activeModelId }) {
               opacity: 0.75, // Rich, high opacity
               zIndex: 2
             }}
-          ></video>
+          >
+            <source src={bgVideo.url} type="video/mp4" />
+          </video>
         ) : null}
         
         <div className="hero-gradient" style={{ zIndex: 3 }}></div>
@@ -194,7 +195,6 @@ export default function Hero({ activeModelId }) {
             <video
               ref={showcaseRef}
               className="hero-video"
-              src={showcaseVideo.url}
               autoPlay
               loop
               muted={true}
@@ -208,7 +208,9 @@ export default function Hero({ activeModelId }) {
                 boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
                 objectFit: 'cover'
               }}
-            ></video>
+            >
+              <source src={showcaseVideo.url} type="video/mp4" />
+            </video>
           ) : null}
         </div>
       </div>
